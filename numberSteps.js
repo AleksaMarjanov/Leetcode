@@ -9,8 +9,9 @@ var numberOfSteps = function (num) {
 
   // check if number is odd or even
   while(num > 0) {
-          if (num % 2 === 0) {
-              num /= 2;
+    // Before bitmask I used num % 2 to check if it even 
+          if ((num & 1) === 0) {
+              num >>= 1;  // Before I used num /= 2 to half the number
             } else {
               num--; 
             }
